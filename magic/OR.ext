@@ -1,0 +1,25 @@
+timestamp 1701543975
+version 8.2
+tech scmos
+style lambda=0.6(hp)
+scale 1000 1000 60
+resistclasses 99630 120000 25000 60 40 1500000
+use NOR NOR_0 1 0 20 0 1 44
+use not not_0 1 0 108 0 1 36
+node "gnd" 1 22.338 0 -7 v 0 0 0 0 0 0 184 78 1192 314 0 0
+node "out" 0 1.518 121 31 m1 0 0 0 0 0 0 33 28 0 0 0 0
+node "m1_47_30#" 1 8.598 47 30 m1 0 0 0 0 0 0 265 116 0 0 0 0
+node "B" 0 0.954 18 37 m1 0 0 0 0 0 0 20 18 0 0 0 0
+node "A" 0 1.368 -4 37 m1 0 0 0 0 0 0 32 24 0 0 0 0
+node "vdd" 1 18.94 1 69 v 0 0 0 0 0 0 91 54 1043 316 0 0
+subcap "gnd" -3.311
+subcap "vdd" -8.7
+merge "not_0/out" "out" -0.558 0 0 0 0 0 0 -9 -12 0 0 0 0
+merge "not_0/gnd" "NOR_0/gnd" -2.912 0 0 0 0 0 0 -64 -48 0 0 0 0
+merge "NOR_0/gnd" "gnd"
+merge "not_0/in" "NOR_0/out" -1.086 0 0 0 0 0 0 -9 -28 0 0 0 0
+merge "NOR_0/out" "m1_47_30#"
+merge "NOR_0/A" "A" -0.816 0 0 0 0 0 0 -16 -16 0 0 0 0
+merge "NOR_0/B" "B" -0.678 0 0 0 0 0 0 -12 -14 0 0 0 0
+merge "not_0/VDD" "NOR_0/vdd" -7.328 0 0 0 0 0 0 7 -26 -376 -133 0 0
+merge "NOR_0/vdd" "vdd"

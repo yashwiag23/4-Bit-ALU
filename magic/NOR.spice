@@ -1,0 +1,17 @@
+* NGSPICE file created from NOR.ext - technology: scmos
+
+.global Vdd Gnd 
+
+
+* Top level circuit NOR
+
+M1000 out A gnd Gnd nfet w=3u l=1.2u
++  ad=28.8p pd=31.2u as=27p ps=30u
+M1001 out B gnd Gnd nfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1002 out B a_n4_7# w_n19_1# pfet w=3.6u l=1.2u
++  ad=17.28p pd=16.8u as=34.56p ps=26.4u
+M1003 a_n4_7# A vdd w_n19_1# pfet w=3.6u l=1.2u
++  ad=0p pd=0u as=15.12p ps=15.6u
+.end
+

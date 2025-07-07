@@ -1,0 +1,147 @@
+* NGSPICE file created from comparator.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt not gnd VDD in out
+M1000 out in gnd Gnd nfet w=2.4u l=1.2u
++  ad=7.2p pd=10.8u as=7.2p ps=10.8u
+M1001 out in VDD w_n9_1# pfet w=2.4u l=1.2u
++  ad=7.2p pd=10.8u as=7.2p ps=10.8u
+.ends
+
+.subckt AND4 gnd A B C D out vdd
+Xnot_0 gnd vdd not_0/in out not
+M1000 not_0/in D a_25_n36# Gnd nfet w=3u l=1.2u
++  ad=14.4p pd=15.6u as=30.6p ps=26.4u
+M1001 a_6_n36# B a_n14_n36# Gnd nfet w=3u l=1.2u
++  ad=30.6p pd=26.4u as=32.4p ps=27.6u
+M1002 not_0/in D vdd w_n27_2# pfet w=3u l=1.2u
++  ad=37.8p pd=49.2u as=41.4p ps=51.6u
+M1003 not_0/in C vdd w_n27_2# pfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1004 a_25_n36# C a_6_n36# Gnd nfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1005 a_n14_n36# A gnd Gnd nfet w=3u l=1.2u
++  ad=0p pd=0u as=14.4p ps=15.6u
+M1006 not_0/in B vdd w_n27_2# pfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1007 not_0/in A vdd w_n27_2# pfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+.ends
+
+.subckt NAND gnd A B out vdd
+M1000 a_13_n30# A gnd Gnd nfet w=3u l=1.2u
++  ad=28.8p pd=25.2u as=21.6p ps=20.4u
+M1001 out B a_13_n30# Gnd nfet w=3u l=1.2u
++  ad=14.4p pd=15.6u as=0p ps=0u
+M1002 out B vdd w_n1_n1# pfet w=2.4u l=1.2u
++  ad=14.4p pd=21.6u as=17.28p ps=24u
+M1003 out A vdd w_n1_n1# pfet w=2.4u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+.ends
+
+.subckt XOR gnd vdd A B out
+XNAND_0 gnd A NAND_3/A NAND_1/A vdd NAND
+XNAND_1 gnd NAND_1/A NAND_1/B out vdd NAND
+XNAND_2 gnd A B NAND_3/A vdd NAND
+XNAND_3 gnd NAND_3/A B NAND_1/B vdd NAND
+.ends
+
+.subckt XNOR XOR_0/vdd XOR_0/gnd A B out XOR_0/NAND_0/gnd vdd
+Xnot_0 gnd vdd not_0/in out not
+XXOR_0 XOR_0/gnd XOR_0/vdd A B not_0/in XOR
+.ends
+
+.subckt AND gnd A B out vdd
+XNAND_0 gnd A B not_0/in vdd NAND
+Xnot_0 gnd vdd not_0/in out not
+.ends
+
+.subckt AND3 gnd A B C out vdd
+Xnot_0 gnd vdd not_0/in out not
+M1000 not_0/in B vdd w_n31_n3# pfet w=3u l=1.2u
++  ad=32.4p pd=39.6u as=27p ps=36u
+M1001 a_2_n39# B a_n18_n39# Gnd nfet w=3.6u l=1.2u
++  ad=41.04p pd=30u as=38.88p ps=28.8u
+M1002 not_0/in C a_2_n39# Gnd nfet w=3.6u l=1.2u
++  ad=30.24p pd=24u as=0p ps=0u
+M1003 not_0/in C vdd w_n31_n3# pfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1004 not_0/in A vdd w_n31_n3# pfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1005 a_n18_n39# A gnd Gnd nfet w=3.6u l=1.2u
++  ad=0p pd=0u as=23.76p ps=20.4u
+.ends
+
+.subckt OR4 gnd A B C D out vdd
+Xnot_0 gnd vdd not_0/in out not
+M1000 a_n8_9# A vdd w_n21_0# pfet w=3u l=1.2u
++  ad=28.8p pd=25.2u as=9p ps=12u
+M1001 not_0/in D gnd Gnd nfet w=3.6u l=1.2u
++  ad=54p pd=58.8u as=60.48p ps=62.4u
+M1002 not_0/in D a_30_9# w_n21_0# pfet w=3u l=1.2u
++  ad=10.8p pd=13.2u as=32.4p ps=27.6u
+M1003 not_0/in A gnd Gnd nfet w=3.6u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1004 a_10_9# B a_n8_9# w_n21_0# pfet w=3u l=1.2u
++  ad=32.4p pd=27.6u as=0p ps=0u
+M1005 not_0/in C gnd Gnd nfet w=3.6u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1006 not_0/in B gnd Gnd nfet w=3.6u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1007 a_30_9# C a_10_9# w_n21_0# pfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+.ends
+
+.subckt AND5 gnd A B C D E out vdd
+Xnot_0 gnd vdd not_0/in out not
+M1000 not_0/in E a_49_n35# Gnd nfet w=2.4u l=1.2u
++  ad=11.52p pd=14.4u as=24.48p ps=25.2u
+M1001 not_0/in E vdd w_n22_7# pfet w=3u l=1.2u
++  ad=50.4p pd=63.6u as=48.6p ps=62.4u
+M1002 not_0/in D vdd w_n22_7# pfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1003 a_n9_n35# A gnd Gnd nfet w=2.4u l=1.2u
++  ad=24.48p pd=25.2u as=11.52p ps=14.4u
+M1004 a_10_n35# B a_n9_n35# Gnd nfet w=2.4u l=1.2u
++  ad=24.48p pd=25.2u as=0p ps=0u
+M1005 not_0/in A vdd w_n22_7# pfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1006 a_49_n35# D a_29_n35# Gnd nfet w=2.4u l=1.2u
++  ad=0p pd=0u as=25.92p ps=26.4u
+M1007 not_0/in C vdd w_n22_7# pfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1008 a_29_n35# C a_10_n35# Gnd nfet w=2.4u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1009 not_0/in B vdd w_n22_7# pfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+.ends
+
+
+* Top level circuit comparator
+
+XAND4_0 AND4_0/gnd AND4_0/A AND4_0/B AND4_2/C AND3_1/C equal vdd AND4
+XAND4_1 gnd AND4_1/A A1 AND4_2/C AND3_1/C OR4_0/C not_4/VDD AND4
+XAND4_2 gnd AND4_2/A B1 AND4_2/C AND3_1/C OR4_1/C not_4/VDD AND4
+XXNOR_0 XNOR_0/XOR_0/vdd gnd A0 B0 AND4_0/A XNOR_0/XOR_0/NAND_0/gnd vdd XNOR
+XXNOR_1 vdd gnd A1 B1 AND4_0/B XNOR_1/XOR_0/NAND_0/gnd XNOR_1/vdd XNOR
+XXNOR_3 XNOR_3/XOR_0/vdd gnd A3 B3 AND3_1/C XNOR_3/XOR_0/NAND_0/gnd vdd XNOR
+XXNOR_2 XNOR_2/XOR_0/vdd XNOR_2/XOR_0/gnd A2 B2 AND4_2/C gnd not_4/VDD XNOR
+XAND_1 gnd AND_1/A B3 OR4_1/B vdd AND
+XAND_0 gnd AND_0/A A3 OR4_0/A vdd AND
+XAND3_0 gnd AND3_0/A A2 AND3_1/C OR4_0/B not_4/VDD AND3
+XAND3_1 gnd AND3_1/A B2 AND3_1/C OR4_1/A AND3_1/vdd AND3
+Xnot_0 gnd vdd B0 AND5_0/A not
+Xnot_1 gnd vdd A0 AND5_1/A not
+Xnot_2 gnd not_4/VDD B1 AND4_1/A not
+Xnot_4 gnd not_4/VDD B2 AND3_0/A not
+Xnot_3 gnd not_4/VDD A1 AND4_2/A not
+Xnot_5 gnd vdd A2 AND3_1/A not
+Xnot_6 gnd vdd B3 AND_0/A not
+Xnot_7 gnd vdd A3 AND_1/A not
+XOR4_1 gnd OR4_1/A OR4_1/B OR4_1/C OR4_1/D lesser vdd OR4
+XOR4_0 gnd OR4_0/A OR4_0/B OR4_0/C OR4_0/D greater OR4_0/vdd OR4
+XAND5_0 gnd AND5_0/A A0 AND4_0/B AND4_2/C AND3_1/C OR4_0/D vdd AND5
+XAND5_1 gnd AND5_1/A B0 AND4_0/B AND4_2/C AND3_1/C OR4_1/D AND5_1/vdd AND5
+.end
+

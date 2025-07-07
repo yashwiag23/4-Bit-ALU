@@ -1,0 +1,384 @@
+timestamp 1701502639
+version 8.2
+tech scmos
+style lambda=0.6(hp)
+scale 1000 1000 60
+resistclasses 99630 120000 25000 60 40 1500000
+use XNOR XNOR_0 1 0 10 0 1 18
+use not not_0 1 0 151 0 1 -41
+use AND5 AND5_0 1 0 612 0 1 -72
+use not not_1 1 0 153 0 1 -142
+use XNOR XNOR_1 1 0 1 0 1 -406
+use AND5 AND5_1 1 0 710 0 1 -232
+use OR4 OR4_0 1 0 1305 0 1 -157
+use not not_2 1 0 153 0 1 -484
+use AND4 AND4_1 1 0 504 0 1 -484
+use AND4 AND4_0 1 0 1257 0 1 -520
+use not not_3 1 0 153 0 1 -587
+use AND4 AND4_2 1 0 646 0 1 -612
+use XNOR XNOR_2 1 0 -11 0 1 -864
+use not not_4 1 0 147 0 1 -945
+use AND3 AND3_0 1 0 588 0 1 -931
+use not not_5 1 0 149 0 1 -1042
+use AND3 AND3_1 1 0 758 0 1 -1058
+use OR4 OR4_1 1 0 1439 0 1 -1052
+use XNOR XNOR_3 1 0 -5 0 1 -1325
+use not not_6 1 0 128 0 1 -1439
+use AND AND_0 1 0 237 0 1 -1500
+use not not_7 1 0 129 0 1 -1561
+use AND AND_1 1 0 242 0 1 -1618
+node "m2_319_n1442#" 2 17.664 319 -1442 m2 0 0 0 0 0 0 0 0 995 408 0 0
+node "m1_142_n1566#" 3 15.558 142 -1566 m1 0 0 0 0 0 0 384 262 0 0 0 0
+node "m1_120_n1541#" 1 13.565 120 -1541 v 0 0 0 0 0 0 25 20 700 290 0 0
+node "m1_140_n1444#" 3 16.176 140 -1444 m1 0 0 0 0 0 0 400 272 0 0 0 0
+node "m1_119_n1419#" 1 13.209 119 -1419 v 0 0 0 0 0 0 25 20 680 282 0 0
+node "B3" 20 117.247 -97 -1302 m1 0 0 0 0 0 0 2447 1638 866 578 0 0
+node "lesser" 1 3.918 1590 -1074 m1 0 0 0 0 0 0 93 68 0 0 0 0
+node "m1_350_n1599#" 30 176.559 350 -1599 m1 0 0 0 0 0 0 3731 2494 1178 786 0 0
+node "A3" 23 210.162 -206 -1213 m1 0 0 0 0 0 0 6084 3050 0 0 0 0
+node "m1_883_n1074#" 10 56.335 883 -1074 m1 0 0 0 0 0 0 1052 708 626 418 0 0
+node "m1_162_n1047#" 12 71.598 162 -1047 m1 0 0 0 0 0 0 1785 1196 0 0 0 0
+node "m1_160_n950#" 8 48.198 160 -950 m1 0 0 0 0 0 0 1200 806 0 0 0 0
+node "m1_152_n928#" 12 74.958 152 -928 m1 0 0 0 0 0 0 1383 916 1020 516 0 0
+node "B2" 21 122.174 -76 -841 m1 0 0 0 0 0 0 1948 1300 1928 1286 0 0
+node "A2" 20 187.806 -162 -752 m1 0 0 0 0 0 0 5436 2726 0 0 0 0
+node "m1_769_n624#" 23 133.434 769 -624 m1 0 0 0 0 0 0 2360 1580 1673 1116 0 0
+node "m1_166_n592#" 10 58.998 166 -592 m1 0 0 0 0 0 0 1470 986 0 0 0 0
+node "equal" 1 3.798 1383 -532 m1 0 0 0 0 0 0 90 66 0 0 0 0
+node "greater" 2 9.558 1456 -179 m1 0 0 0 0 0 0 234 162 0 0 0 0
+node "m1_710_n947#" 28 153.918 710 -947 m1 0 0 0 0 0 0 1454 976 4127 2752 0 0
+node "m1_345_n1481#" 68 405.318 345 -1481 m1 0 0 0 0 0 0 10128 6758 0 0 0 0
+node "m1_166_n489#" 6 38.958 166 -489 m1 0 0 0 0 0 0 969 652 0 0 0 0
+node "m1_630_n496#" 17 94.621 630 -496 m1 0 0 0 0 0 0 1207 812 2011 1342 0 0
+node "m1_146_n567#" 13 114.22 146 -567 v 0 0 0 0 0 0 864 382 4455 2224 0 0
+node "B1" 20 114.434 -64 -383 m1 0 0 0 0 0 0 1814 1216 1817 1212 0 0
+node "A1" 21 195.024 -157 -294 m1 0 0 0 0 0 0 5650 2828 0 0 0 0
+node "m1_855_n194#" 27 149.415 855 -194 m1 0 0 0 0 0 0 1178 792 4388 2926 0 0
+node "m1_166_n147#" 10 86.988 166 -147 m1 0 0 0 0 0 0 2497 1274 0 0 0 0
+node "m1_439_n1256#" 79 445.601 439 -1256 m1 0 0 0 0 0 0 6539 4362 8003 5330 0 0
+node "m1_431_n795#" 33 247.402 431 -795 m1 0 0 0 0 0 0 1077 730 10458 5234 0 0
+node "m1_445_n337#" 26 154.428 445 -337 m1 0 0 0 0 0 0 3391 2268 847 566 0 0
+node "gnd" 169 1173.23 84 -1077 m1 0 0 0 0 0 0 10574 5692 37391 21482 0 0
+node "m1_164_n46#" 9 56.358 164 -46 m1 0 0 0 0 0 0 1404 942 0 0 0 0
+node "m1_756_n34#" 12 64.437 756 -34 m1 0 0 0 0 0 0 692 468 1574 1050 0 0
+node "m1_51_n228#" 9 142.124 51 -228 v 0 0 0 0 0 0 3928 1394 1695 614 0 0
+node "vdd" 57 700.788 143 -1023 m1 0 0 0 0 0 0 7125 2494 28095 11148 0 0
+node "B0" 25 145.076 -83 41 m1 0 0 0 0 0 0 3038 2032 1052 702 0 0
+node "m1_453_87#" 28 168.078 453 87 m1 0 0 0 0 0 0 4197 2804 0 0 0 0
+node "A0" 22 207.66 -140 -144 m1 0 0 0 0 0 0 6022 3008 0 0 0 0
+cap "vdd" "m1_769_n624#" 1.044
+cap "m1_345_n1481#" "gnd" 1.818
+cap "gnd" "A1" 2.432
+cap "gnd" "m1_710_n947#" 0.898
+cap "m1_146_n567#" "m1_166_n489#" 0.752
+cap "gnd" "m1_439_n1256#" 1.358
+cap "A0" "B0" 1.504
+cap "B1" "m1_146_n567#" 0.752
+cap "A3" "m1_140_n1444#" 0.2565
+cap "gnd" "B0" 3.322
+cap "m1_166_n147#" "B0" 0.3456
+cap "gnd" "A2" 3.712
+cap "m1_431_n795#" "gnd" 2.032
+cap "m1_166_n147#" "m1_431_n795#" 0.928
+cap "vdd" "m1_756_n34#" 0.752
+cap "gnd" "A0" 1.68
+cap "A3" "gnd" 2.256
+cap "m1_855_n194#" "m1_769_n624#" 1.98
+cap "m1_855_n194#" "vdd" 2.088
+cap "m1_166_n147#" "gnd" 0.752
+cap "B2" "m1_439_n1256#" 0.606
+cap "vdd" "m1_453_87#" 0.752
+cap "m1_166_n592#" "m1_431_n795#" 0.752
+cap "m1_345_n1481#" "vdd" 1.044
+cap "A1" "m1_146_n567#" 0.928
+cap "m1_710_n947#" "m1_769_n624#" 0.606
+cap "vdd" "m1_710_n947#" 2.088
+cap "B2" "A2" 1.504
+cap "m1_769_n624#" "m1_439_n1256#" 1.818
+cap "m1_345_n1481#" "m1_350_n1599#" 0.606
+cap "vdd" "m1_439_n1256#" 4.636
+cap "m1_51_n228#" "B0" 2.088
+cap "vdd" "m1_883_n1074#" 1.044
+cap "B1" "A1" 1.504
+cap "A3" "B3" 1.504
+cap "m1_431_n795#" "m1_769_n624#" 1.504
+cap "m1_431_n795#" "m1_146_n567#" 1.104
+cap "m1_630_n496#" "m1_445_n337#" 0.66
+cap "B3" "gnd" 1.212
+cap "m1_445_n337#" "m1_453_87#" 1.2204
+cap "m1_345_n1481#" "m2_319_n1442#" 0.898
+cap "m1_350_n1599#" "m1_883_n1074#" 0.0675
+cap "m1_439_n1256#" "m1_162_n1047#" 0.606
+cap "m1_51_n228#" "A0" 3.84
+cap "m1_630_n496#" "m1_756_n34#" 1.2672
+cap "B2" "gnd" 2.256
+cap "m1_756_n34#" "m1_453_87#" 0.606
+cap "m1_439_n1256#" "m1_445_n337#" 0.606
+cap "gnd" "m1_51_n228#" 1.28
+cap "B1" "m1_431_n795#" 0.752
+cap "m1_630_n496#" "m1_453_87#" 0.606
+cap "m1_855_n194#" "m1_630_n496#" 0.606
+cap "m1_855_n194#" "m1_453_87#" 0.606
+cap "gnd" "m1_146_n567#" 1.68
+cap "vdd" "gnd" 3.604
+cap "B0" "m1_445_n337#" 0.606
+cap "m1_164_n46#" "A0" 0.378
+cap "m1_431_n795#" "m1_445_n337#" 1.504
+cap "m1_630_n496#" "m1_710_n947#" 0.0825
+cap "gnd" "m1_350_n1599#" 0.606
+cap "m1_855_n194#" "m1_710_n947#" 0.606
+cap "m1_152_n928#" "m1_431_n795#" 0.752
+cap "m1_630_n496#" "m1_439_n1256#" 0.606
+cap "m1_855_n194#" "m1_439_n1256#" 0.606
+cap "m1_345_n1481#" "m1_710_n947#" 0.606
+cap "B1" "gnd" 1.358
+cap "m1_142_n1566#" "B3" 0.54
+cap "m1_710_n947#" "m1_439_n1256#" 0.606
+cap "m1_431_n795#" "m1_630_n496#" 0.752
+cap "m1_166_n592#" "m1_146_n567#" 0.752
+cap "gnd" "m1_445_n337#" 0.606
+cap "m1_166_n147#" "m1_445_n337#" 0.752
+cap "m1_439_n1256#" "m1_883_n1074#" 0.606
+cap "m1_431_n795#" "m1_439_n1256#" 1.504
+cap "m1_855_n194#" "gnd" 0.898
+cap "m1_431_n795#" "B0" 0.752
+cap "AND_1/B" "AND_1/A" 0.72
+cap "AND_1/B" "AND_1/gnd" 0.054
+subcap "m1_350_n1599#" -173.121
+subcap "m1_350_n1599#" -176.1
+subcap "m1_142_n1566#" -12.261
+subcap "m1_120_n1541#" -8.473
+cap "AND_0/A" "AND_0/B" 0.826
+cap "AND_0/gnd" "AND_0/B" 0.054
+subcap "m1_345_n1481#" -402.903
+subcap "m1_140_n1444#" -12.879
+subcap "m1_119_n1419#" -7.388
+cap "AND_0/B" "AND_0/A" 0.054
+subcap "m2_319_n1442#" -2.606
+subcap "m1_345_n1481#" -404.358
+subcap "m1_439_n1256#" -440.984
+cap "AND3_1/B" "AND3_1/A" 0.612
+cap "AND3_1/B" "AND3_1/gnd" 0.0432
+cap "AND3_1/a_2_n39#" "AND3_1/C" 0.456
+cap "AND3_1/not_0/gnd" "AND3_1/C" 0.752
+subcap "m1_883_n1074#" -58.858
+cap "OR4_1/A" "OR4_1/B" 0.452
+cap "OR4_1/B" "OR4_1/a_n8_n45#" 0.0405
+subcap "lesser" -6.531
+subcap "m1_162_n1047#" -70.365
+subcap "vdd" -697.242
+subcap "m1_162_n1047#" -68.775
+cap "not_5/VDD" "vdd" 0.0864
+cap "m1_439_n1256#" "AND3_0/gnd" 0.752
+cap "AND3_1/B" "AND3_1/a_n18_5#" 0.054
+cap "AND3_1/C" "AND3_1/not_0/in" 0.054
+subcap "m1_883_n1074#" -51.829
+cap "OR4_1/C" "OR4_1/A" 0.612
+cap "OR4_1/C" "OR4_1/B" 0.612
+cap "OR4_1/A" "OR4_1/B" 0.3784
+cap "OR4_1/A" "m1_855_n194#" 0.612
+cap "m1_855_n194#" "OR4_1/B" 0.612
+cap "OR4_1/D" "OR4_1/C" 0.612
+subcap "m1_160_n950#" -46.56
+subcap "m1_152_n928#" -71.745
+subcap "m1_160_n950#" -36.81
+subcap "m1_152_n928#" -62.625
+cap "AND3_0/B" "AND3_0/A" 0.772
+cap "AND3_0/B" "AND3_0/gnd" 0.054
+cap "AND3_0/a_2_n39#" "AND3_0/C" 0.456
+cap "AND3_0/B" "AND3_0/a_n18_5#" 0.054
+cap "AND3_0/a_n18_5#" "AND3_0/C" 0.0675
+subcap "m1_710_n947#" -149.181
+subcap "m1_431_n795#" -242.785
+subcap "m1_166_n592#" -46.212
+cap "AND4_2/B" "AND4_2/gnd" 0.0432
+cap "AND4_2/C" "AND4_2/gnd" 0.928
+cap "AND4_2/C" "AND4_2/B" 0.0432
+cap "AND4_2/A" "AND4_2/B" 0.612
+cap "AND4_2/C" "AND4_2/a_6_n36#" 0.44
+cap "AND4_2/D" "AND4_2/a_25_n36#" 0.38
+cap "AND4_2/D" "AND4_2/not_0/gnd" 0.752
+cap "AND4_2/not_0/gnd" "AND4_2/C" -0.196
+subcap "m1_769_n624#" -129.588
+subcap "m1_146_n567#" -111.264
+subcap "m1_166_n489#" -35.805
+cap "AND4_1/a_6_n36#" "AND4_1/C" 0.44
+cap "AND4_1/C" "AND4_1/B" 0.0432
+cap "AND4_1/a_25_n36#" "AND4_1/D" 0.38
+cap "AND4_1/A" "AND4_1/B" 0.772
+cap "AND4_1/gnd" "AND4_1/D" 0.752
+cap "AND4_1/C" "AND4_1/gnd" 0.928
+subcap "m1_630_n496#" -88.423
+cap "AND4_0/A" "AND4_0/B" 0.72
+cap "AND4_0/C" "AND4_0/a_6_n36#" 0.44
+cap "AND4_0/D" "AND4_0/a_25_n36#" 0.38
+cap "AND4_0/D" "AND4_0/not_0/gnd" 0.752
+cap "AND4_0/C" "AND4_0/not_0/gnd" 0.928
+subcap "m1_445_n337#" -149.811
+cap "m1_445_n337#" "AND5_1/gnd" 0.03375
+subcap "m1_51_n228#" -137.227
+subcap "m1_51_n228#" -125.801
+cap "AND5_1/a_10_n35#" "AND5_1/C" 0.304
+cap "AND5_1/C" "AND5_1/gnd" 0.63975
+cap "AND5_1/a_29_n35#" "AND5_1/D" 0.352
+cap "AND5_1/gnd" "AND5_1/D" 0.752
+cap "AND5_1/B" "AND5_1/A" 0.6552
+subcap "m1_855_n194#" -145.989
+cap "AND5_1/E" "AND5_1/not_0/gnd" 0.606
+cap "AND5_1/E" "AND5_1/a_49_n35#" 0.304
+subcap "m1_855_n194#" -148.356
+cap "OR4_0/A" "OR4_0/B" 0.334
+subcap "greater" -8.316
+subcap "greater" -9.261
+subcap "m1_166_n147#" -83.691
+cap "AND5_0/a_29_n35#" "AND5_0/D" 0.352
+cap "AND5_0/gnd" "AND5_0/D" 0.752
+cap "AND5_0/A" "AND5_0/B" 0.8476
+cap "AND5_0/C" "AND5_0/a_10_n35#" 0.304
+cap "AND5_0/C" "AND5_0/gnd" 0.606
+cap "AND5_0/E" "AND5_0/gnd" 0.606
+cap "AND5_0/E" "AND5_0/a_49_n35#" 0.304
+cap "OR4_0/D" "OR4_0/A" 0.334
+cap "OR4_0/D" "OR4_0/B" 0.334
+cap "OR4_0/A" "OR4_0/C" 0.334
+cap "OR4_0/B" "OR4_0/C" 0.334
+cap "OR4_0/D" "OR4_0/C" 0.334
+subcap "greater" -6.945
+subcap "greater" -0.459
+subcap "m1_164_n46#" -43.611
+subcap "m1_756_n34#" -61.119
+subcap "m1_756_n34#" -63.138
+subcap "m1_453_87#" -164.4
+subcap "m1_453_87#" -167.139
+merge "OR4_0/A" "AND_0/out" -1.221 0 0 0 0 0 0 -22 -25 0 0 0 0
+merge "AND_0/out" "m1_345_n1481#"
+merge "not_0/out" "AND5_0/A" -1.092 0 0 0 0 0 0 -24 -20 0 0 0 0
+merge "AND5_0/A" "m1_164_n46#"
+merge "XNOR_2/B" "not_4/in" -2.724 0 0 0 0 0 0 -50 -48 0 0 0 0
+merge "not_4/in" "AND3_1/B"
+merge "AND3_1/B" "B2"
+merge "AND4_2/A" "not_3/out" -0.996 0 0 0 0 0 0 -15 -22 0 0 0 0
+merge "not_3/out" "m1_166_n592#"
+merge "not_0/gnd" "XNOR_0/XOR_0/gnd" -63.37 0 0 0 0 0 0 -526 -488 -1788 -980 0 0
+merge "XNOR_0/XOR_0/gnd" "AND5_0/gnd"
+merge "AND5_0/gnd" "not_1/gnd"
+merge "not_1/gnd" "OR4_0/gnd"
+merge "OR4_0/gnd" "AND5_1/gnd"
+merge "AND5_1/gnd" "XNOR_1/XOR_0/gnd"
+merge "XNOR_1/XOR_0/gnd" "AND4_0/not_0/gnd"
+merge "AND4_0/not_0/gnd" "AND4_1/gnd"
+merge "AND4_1/gnd" "not_2/gnd"
+merge "not_2/gnd" "AND4_2/gnd"
+merge "AND4_2/gnd" "not_3/gnd"
+merge "not_3/gnd" "XNOR_2/XOR_0/NAND_0/gnd"
+merge "XNOR_2/XOR_0/NAND_0/gnd" "not_4/gnd"
+merge "not_4/gnd" "AND3_0/gnd"
+merge "AND3_0/gnd" "not_5/gnd"
+merge "not_5/gnd" "OR4_1/gnd"
+merge "OR4_1/gnd" "AND3_1/gnd"
+merge "AND3_1/gnd" "XNOR_3/XOR_0/gnd"
+merge "XNOR_3/XOR_0/gnd" "not_6/gnd"
+merge "not_6/gnd" "AND_0/gnd"
+merge "AND_0/gnd" "AND_1/gnd"
+merge "AND_1/gnd" "not_7/gnd"
+merge "not_7/gnd" "gnd"
+merge "XNOR_1/B" "not_2/in" -1.524 0 0 0 0 0 0 -9 -34 0 0 0 0
+merge "not_2/in" "AND4_2/B"
+merge "AND4_2/B" "B1"
+merge "AND5_0/C" "AND5_1/C" -3.896 0 0 0 0 0 0 -19 -52 -21 -17 0 0
+merge "AND5_1/C" "XNOR_1/out"
+merge "XNOR_1/out" "AND4_0/B"
+merge "AND4_0/B" "m1_445_n337#"
+merge "XNOR_0/A" "AND5_0/B" -2.418 0 0 0 0 0 0 -31 -48 0 0 0 0
+merge "AND5_0/B" "not_1/in"
+merge "not_1/in" "A0"
+merge "AND4_1/vdd" "not_2/VDD" -16.875 0 0 0 0 0 0 -446 -233 -4 -36 0 0
+merge "not_2/VDD" "not_3/VDD"
+merge "not_3/VDD" "AND4_2/vdd"
+merge "AND4_2/vdd" "XNOR_2/vdd"
+merge "XNOR_2/vdd" "XNOR_2/not_0/VDD"
+merge "XNOR_2/not_0/VDD" "m1_146_n567#"
+merge "m1_146_n567#" "AND3_0/vdd"
+merge "AND3_0/vdd" "not_4/VDD"
+merge "not_4/VDD" "m1_152_n928#"
+merge "XNOR_0/vdd" "AND5_0/vdd" -30.036 0 0 0 0 0 0 -762 -392 -90 -103 0 0
+merge "AND5_0/vdd" "not_0/VDD"
+merge "not_0/VDD" "not_1/VDD"
+merge "not_1/VDD" "XNOR_1/XOR_0/vdd"
+merge "XNOR_1/XOR_0/vdd" "m1_51_n228#"
+merge "m1_51_n228#" "OR4_0/not_0/VDD"
+merge "OR4_0/not_0/VDD" "AND5_1/not_0/VDD"
+merge "AND5_1/not_0/VDD" "AND4_0/vdd"
+merge "AND4_0/vdd" "AND3_0/not_0/VDD"
+merge "AND3_0/not_0/VDD" "OR4_1/vdd"
+merge "OR4_1/vdd" "AND3_1/not_0/VDD"
+merge "AND3_1/not_0/VDD" "not_5/VDD"
+merge "not_5/VDD" "XNOR_3/vdd"
+merge "XNOR_3/vdd" "AND_0/vdd"
+merge "AND_0/vdd" "not_6/VDD"
+merge "not_6/VDD" "m1_119_n1419#"
+merge "m1_119_n1419#" "vdd"
+merge "vdd" "AND_1/vdd"
+merge "AND_1/vdd" "not_7/VDD"
+merge "not_7/VDD" "m1_120_n1541#"
+merge "m1_120_n1541#" "m2_319_n1442#"
+merge "XNOR_3/B" "not_6/in" -1.938 0 0 0 0 0 0 -21 -40 0 0 0 0
+merge "not_6/in" "AND_1/B"
+merge "AND_1/B" "B3"
+merge "not_1/out" "AND5_1/A" -1.374 0 0 0 0 0 0 -25 -28 0 0 0 0
+merge "AND5_1/A" "m1_166_n147#"
+merge "AND5_0/D" "AND5_1/D" -7.032 0 0 0 0 0 0 -43 -72 4 -14 0 0
+merge "AND5_1/D" "AND4_0/C"
+merge "AND4_0/C" "AND4_1/C"
+merge "AND4_1/C" "AND4_2/C"
+merge "AND4_2/C" "XNOR_2/out"
+merge "XNOR_2/out" "m1_431_n795#"
+merge "AND5_1/out" "OR4_1/D" -6.681 0 0 0 0 0 0 -147 -115 0 0 0 0
+merge "OR4_1/D" "m1_855_n194#"
+merge "OR4_1/A" "AND3_1/out" -0.606 0 0 0 0 0 0 3 -20 0 0 0 0
+merge "AND3_1/out" "m1_883_n1074#"
+merge "AND5_0/E" "AND5_1/E" -19.568 0 0 0 0 0 0 23 -80 -267 -484 0 0
+merge "AND5_1/E" "AND4_0/D"
+merge "AND4_0/D" "AND4_1/D"
+merge "AND4_1/D" "AND4_2/D"
+merge "AND4_2/D" "AND3_0/C"
+merge "AND3_0/C" "AND3_1/C"
+merge "AND3_1/C" "XNOR_3/out"
+merge "XNOR_3/out" "m1_439_n1256#"
+merge "AND4_0/out" "equal" -0.558 0 0 0 0 0 0 -9 -12 0 0 0 0
+merge "not_7/out" "AND_1/A" -6.876 0 0 0 0 0 0 -162 -120 0 0 0 0
+merge "AND_1/A" "m1_142_n1566#"
+merge "XNOR_1/A" "AND4_1/B" -7.824 0 0 0 0 0 0 -181 -130 0 0 0 0
+merge "AND4_1/B" "not_3/in"
+merge "not_3/in" "A1"
+merge "not_5/out" "AND3_1/A" -0.876 0 0 0 0 0 0 -12 -20 0 0 0 0
+merge "AND3_1/A" "m1_162_n1047#"
+merge "OR4_1/B" "AND_1/out" -1.302 0 0 0 0 0 0 -15 -20 0 0 0 0
+merge "AND_1/out" "m1_350_n1599#"
+merge "XNOR_0/B" "not_0/in" -1.698 0 0 0 0 0 0 -15 -36 0 0 0 0
+merge "not_0/in" "AND5_1/B"
+merge "AND5_1/B" "B0"
+merge "OR4_1/out" "lesser" -0.288 0 0 0 0 0 0 6 -12 0 0 0 0
+merge "AND4_2/out" "OR4_1/C" -1.662 0 0 0 0 0 0 -18 -26 0 0 0 0
+merge "OR4_1/C" "m1_769_n624#"
+merge "AND3_0/A" "not_4/out" -0.813 0 0 0 0 0 0 -3 -23 0 0 0 0
+merge "not_4/out" "m1_160_n950#"
+merge "not_6/out" "AND_0/A" -1.128 0 0 0 0 0 0 -15 -26 0 0 0 0
+merge "AND_0/A" "m1_140_n1444#"
+merge "XNOR_3/A" "AND_0/B" -3.024 0 0 0 0 0 0 -50 -56 0 0 0 0
+merge "AND_0/B" "not_7/in"
+merge "not_7/in" "A3"
+merge "OR4_0/out" "greater" -0.657 0 0 0 0 0 0 -9 -15 0 0 0 0
+merge "OR4_0/C" "AND4_1/out" -1.332 0 0 0 0 0 0 -13 -22 0 0 0 0
+merge "AND4_1/out" "m1_630_n496#"
+merge "XNOR_2/A" "AND3_0/B" -3.726 0 0 0 0 0 0 -67 -68 0 0 0 0
+merge "AND3_0/B" "not_5/in"
+merge "not_5/in" "A2"
+merge "OR4_0/B" "AND3_0/out" -1.532 0 0 0 0 0 0 -21 -28 0 0 0 0
+merge "AND3_0/out" "m1_710_n947#"
+merge "AND4_1/A" "not_2/out" -0.876 0 0 0 0 0 0 -12 -20 0 0 0 0
+merge "not_2/out" "m1_166_n489#"
+merge "AND5_0/out" "OR4_0/D" -1.456 0 0 0 0 0 0 -12 -22 0 0 0 0
+merge "OR4_0/D" "m1_756_n34#"
+merge "XNOR_0/out" "AND4_0/A" -0.975 0 0 0 0 0 0 -12 -23 0 0 0 0
+merge "AND4_0/A" "m1_453_87#"

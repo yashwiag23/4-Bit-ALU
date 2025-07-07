@@ -1,0 +1,81 @@
+timestamp 1701836177
+version 8.2
+tech scmos
+style lambda=0.6(hp)
+scale 1000 1000 60
+resistclasses 99630 120000 25000 60 40 1500000
+use not not_0 1 0 9 0 1 20
+use AND AND_0 1 0 216 0 1 25
+use not not_1 1 0 10 0 1 -94
+use AND AND_1 1 0 217 0 1 -150
+use AND AND_2 1 0 220 0 1 -329
+use AND AND_3 1 0 223 0 1 -502
+node "en3" 1 8.958 330 -483 m1 0 0 0 0 0 0 219 152 0 0 0 0
+node "en2" 2 11.478 328 -310 m1 0 0 0 0 0 0 282 194 0 0 0 0
+node "en1" 2 12.078 324 -131 m1 0 0 0 0 0 0 297 204 0 0 0 0
+node "s1" 19 122.328 -106 -99 m1 0 0 0 0 0 0 3111 2010 0 0 0 0
+node "gnd" 14 151.936 7 -16 v 0 0 0 0 0 0 410 214 7930 3192 0 0
+node "en0" 2 11.718 323 44 m1 0 0 0 0 0 0 288 198 0 0 0 0
+node "m1_23_n99#" 9 52.518 23 -99 m1 0 0 0 0 0 0 1308 878 0 0 0 0
+node "s0" 12 110.211 -108 15 m1 0 0 0 0 0 0 1865 1016 2560 1034 0 0
+node "m1_22_15#" 12 80.143 22 15 m1 0 0 0 0 0 0 1373 922 1475 600 0 0
+node "vdd" 14 147.854 1 37 m1 0 0 0 0 0 0 131 94 8100 3250 0 0
+cap "m1_22_15#" "s0" 2.002
+cap "vdd" "en0" 0.898
+cap "s0" "m1_23_n99#" 2.039
+cap "gnd" "s1" 4.696
+cap "m1_22_15#" "m1_23_n99#" 1.1356
+cap "s0" "s1" 2.498
+cap "s0" "gnd" 3.312
+cap "vdd" "s0" 1.104
+cap "vdd" "en2" 0.898
+cap "m1_22_15#" "s1" 2.2372
+cap "m1_22_15#" "gnd" 0.898
+cap "vdd" "en1" 0.898
+cap "m1_22_15#" "vdd" 0.898
+cap "gnd" "m1_23_n99#" 1.796
+cap "AND_3/A" "AND_3/B" 0.6876
+cap "AND_3/B" "AND_3/gnd" 0.054
+subcap "en3" -5.061
+cap "AND_2/B" "AND_2/A" 0.6984
+cap "AND_2/B" "AND_2/gnd" 0.054
+subcap "en2" -7.581
+cap "AND_1/gnd" "m1_23_n99#" 0.0216
+subcap "en1" -13.227
+subcap "m1_23_n99#" -49.221
+cap "AND_1/A" "AND_1/B" 0.72
+cap "AND_1/NAND_0/gnd" "AND_1/B" 0.0216
+subcap "en1" -8.67
+subcap "m1_22_15#" -76.846
+subcap "vdd" -144.641
+cap "AND_0/B" "AND_0/A" 0.6876
+cap "AND_0/B" "AND_0/gnd" 0.054
+subcap "en0" -7.821
+merge "AND_0/out" "en0" -0.828 0 0 0 0 0 0 -13 -18 0 0 0 0
+merge "AND_0/gnd" "not_0/gnd" -8.001 0 0 0 0 0 0 -18 -24 -345 -188 0 0
+merge "not_0/gnd" "not_1/gnd"
+merge "not_1/gnd" "AND_1/gnd"
+merge "AND_1/gnd" "AND_2/gnd"
+merge "AND_2/gnd" "AND_3/gnd"
+merge "AND_3/gnd" "gnd"
+merge "AND_0/A" "not_0/out" -2.034 0 0 0 0 0 0 -30 -38 0 0 0 0
+merge "not_0/out" "AND_2/B"
+merge "AND_2/B" "m1_22_15#"
+merge "AND_0/B" "AND_1/B" -1.914 0 0 0 0 0 0 -21 -32 0 0 0 0
+merge "AND_1/B" "not_1/out"
+merge "not_1/out" "m1_23_n99#"
+merge "not_0/in" "AND_1/A" -18 0 0 0 0 0 0 -488 -272 0 0 0 0
+merge "AND_1/A" "AND_3/B"
+merge "AND_3/B" "s0"
+merge "AND_1/out" "en1" -0.612 0 0 0 0 0 0 -1 -18 0 0 0 0
+merge "AND_0/vdd" "not_0/VDD" -8.069 0 0 0 0 0 0 -18 -24 -335 -179 0 0
+merge "not_0/VDD" "AND_1/vdd"
+merge "AND_1/vdd" "not_1/VDD"
+merge "not_1/VDD" "AND_2/vdd"
+merge "AND_2/vdd" "AND_3/vdd"
+merge "AND_3/vdd" "vdd"
+merge "AND_2/out" "en2" -0.708 0 0 0 0 0 0 -10 -16 0 0 0 0
+merge "AND_3/out" "en3" -0.828 0 0 0 0 0 0 -13 -18 0 0 0 0
+merge "not_1/in" "AND_2/A" -16.656 0 0 0 0 0 0 -445 -262 0 0 0 0
+merge "AND_2/A" "AND_3/A"
+merge "AND_3/A" "s1"

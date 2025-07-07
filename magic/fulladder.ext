@@ -1,0 +1,76 @@
+timestamp 1701362989
+version 8.2
+tech scmos
+style lambda=0.6(hp)
+scale 1000 1000 60
+resistclasses 99630 120000 25000 60 40 1500000
+use XOR XOR_0 1 0 136 0 1 88
+use XOR XOR_1 1 0 723 0 1 203
+use AND AND_0 1 0 689 0 1 -61
+use OR OR_0 1 0 954 0 1 -146
+use AND AND_1 1 0 83 0 1 -250
+node "m2_834_115#" 6 47.376 834 115 m2 0 0 0 0 0 0 0 0 2372 1194 0 0
+node "gnd" 8 152.402 122 -284 m2 0 0 0 0 0 0 0 0 9941 2920 0 0
+node "vdd" 17 230.5 -129 -136 m2 0 0 0 0 0 0 0 0 13971 4868 0 0
+node "Car" 1 3.318 1083 -115 m1 0 0 0 0 0 0 78 58 0 0 0 0
+node "m1_191_n231#" 18 109.128 191 -231 m1 0 0 0 0 0 0 2726 1820 0 0 0 0
+node "m1_798_n43#" 3 31.158 798 -43 m1 0 0 0 0 0 0 895 456 0 0 0 0
+node "S" 0 1.782 871 181 m1 0 0 0 0 0 0 44 30 0 0 0 0
+node "B" 7 86.458 -167 -165 m1 0 0 0 0 0 0 2198 898 1045 428 0 0
+node "m1_284_66#" 9 89.373 284 66 m1 0 0 0 0 0 0 1810 840 1746 708 0 0
+node "A" 7 78.804 -96 -82 m1 0 0 0 0 0 0 2387 1086 0 0 0 0
+node "C" 7 234.612 22 -97 m1 0 0 0 0 0 0 9118 2136 0 0 0 0
+cap "vdd" "A" 1.104
+cap "vdd" "C" 3.052
+cap "vdd" "m1_284_66#" 1.988
+cap "C" "gnd" 1.984
+cap "vdd" "B" 0.898
+cap "m1_191_n231#" "gnd" 1.65
+cap "C" "m1_284_66#" 3.616
+cap "m2_834_115#" "Car" 0.752
+cap "A" "B" 3.9276
+cap "AND_1/gnd" "AND_1/B" 0.054
+cap "AND_1/A" "AND_1/B" 0.7308
+subcap "m1_191_n231#" -105.231
+cap "OR_0/A" "OR_0/B" 1.787
+cap "AND_0/gnd" "AND_0/B" 0.0432
+cap "AND_0/A" "AND_0/B" 0.72
+subcap "m1_798_n43#" -27.033
+cap "XOR_0/B" "XOR_0/NAND_2/gnd" 0.752
+subcap "m1_284_66#" -82.488
+subcap "m2_834_115#" -44.234
+subcap "m2_834_115#" -45.943
+cap "m1_284_66#" "XOR_1/gnd" 0.32
+cap "XOR_1/gnd" "XOR_1/B" 0.204
+subcap "m2_834_115#" -37.624
+subcap "m2_834_115#" -42.447
+merge "AND_0/out" "OR_0/A" -1.392 0 0 0 0 0 0 -26 -28 0 0 0 0
+merge "OR_0/A" "m1_798_n43#"
+merge "OR_0/B" "AND_1/out" -1.881 0 0 0 0 0 0 -21 -26 0 0 0 0
+merge "AND_1/out" "m1_191_n231#"
+merge "XOR_1/vdd" "XOR_1/NAND_2/vdd" -20.75 0 0 0 0 0 0 0 0 -1272 -452 0 0
+merge "XOR_1/NAND_2/vdd" "XOR_0/vdd"
+merge "XOR_0/vdd" "OR_0/vdd"
+merge "OR_0/vdd" "AND_0/vdd"
+merge "AND_0/vdd" "AND_1/vdd"
+merge "AND_1/vdd" "vdd"
+merge "XOR_1/out" "S" -0.816 0 0 0 0 0 0 -16 -16 0 0 0 0
+merge "AND_0/not_0/gnd" "AND_0/gnd" -3.707 0 0 0 0 0 0 0 0 -143 -110 0 0
+merge "AND_0/gnd" "XOR_0/NAND_3/gnd"
+merge "XOR_0/NAND_3/gnd" "OR_0/gnd"
+merge "OR_0/gnd" "AND_1/not_0/gnd"
+merge "AND_1/not_0/gnd" "AND_1/gnd"
+merge "AND_1/gnd" "gnd"
+merge "XOR_1/NAND_3/gnd" "XOR_1/gnd" -2.264 0 0 0 0 0 0 0 0 -76 -56 0 0
+merge "XOR_1/gnd" "OR_0/not_0/gnd"
+merge "OR_0/not_0/gnd" "m2_834_115#"
+merge "OR_0/out" "Car" -0.558 0 0 0 0 0 0 -9 -12 0 0 0 0
+merge "XOR_0/B" "AND_1/B" -7.061 0 0 0 0 0 0 -50 -65 -200 -97 0 0
+merge "AND_1/B" "B"
+merge "XOR_0/A" "AND_1/A" -2.184 0 0 0 0 0 0 -37 -46 0 0 0 0
+merge "AND_1/A" "A"
+merge "XOR_1/A" "AND_0/A" -0.96 0 0 0 0 0 0 -13 -22 0 0 0 0
+merge "AND_0/A" "C"
+merge "XOR_1/B" "XOR_0/out" -11.232 0 0 0 0 0 0 -343 -146 0 0 0 0
+merge "XOR_0/out" "AND_0/B"
+merge "AND_0/B" "m1_284_66#"

@@ -1,0 +1,29 @@
+* NGSPICE file created from OR.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt not gnd VDD in out
+M1000 out in gnd Gnd nfet w=2.4u l=1.2u
++  ad=7.2p pd=10.8u as=7.2p ps=10.8u
+M1001 out in VDD w_n9_1# pfet w=2.4u l=1.2u
++  ad=7.2p pd=10.8u as=7.2p ps=10.8u
+.ends
+
+.subckt NOR gnd A B out vdd
+M1000 out A gnd Gnd nfet w=3u l=1.2u
++  ad=28.8p pd=31.2u as=27p ps=30u
+M1001 out B gnd Gnd nfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1002 out B a_n4_7# w_n19_1# pfet w=3.6u l=1.2u
++  ad=17.28p pd=16.8u as=34.56p ps=26.4u
+M1003 a_n4_7# A vdd w_n19_1# pfet w=3.6u l=1.2u
++  ad=0p pd=0u as=15.12p ps=15.6u
+.ends
+
+
+* Top level circuit OR
+
+Xnot_0 gnd vdd not_0/in out not
+XNOR_0 gnd A B not_0/in vdd NOR
+.end
+

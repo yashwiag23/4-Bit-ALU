@@ -1,0 +1,29 @@
+* NGSPICE file created from AND3.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt not gnd VDD in out
+M1000 out in gnd Gnd nfet w=2.4u l=1.2u
++  ad=7.2p pd=10.8u as=7.2p ps=10.8u
+M1001 out in VDD w_n9_1# pfet w=2.4u l=1.2u
++  ad=7.2p pd=10.8u as=7.2p ps=10.8u
+.ends
+
+
+* Top level circuit AND3
+
+Xnot_0 gnd vdd not_0/in out not
+M1000 not_0/in B vdd w_n31_n3# pfet w=3u l=1.2u
++  ad=32.4p pd=39.6u as=27p ps=36u
+M1001 a_2_n39# B a_n18_n39# Gnd nfet w=3.6u l=1.2u
++  ad=41.04p pd=30u as=38.88p ps=28.8u
+M1002 not_0/in C a_2_n39# Gnd nfet w=3.6u l=1.2u
++  ad=30.24p pd=24u as=0p ps=0u
+M1003 not_0/in C vdd w_n31_n3# pfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1004 not_0/in A vdd w_n31_n3# pfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1005 a_n18_n39# A gnd Gnd nfet w=3.6u l=1.2u
++  ad=0p pd=0u as=23.76p ps=20.4u
+.end
+

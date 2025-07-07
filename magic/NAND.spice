@@ -1,0 +1,17 @@
+* NGSPICE file created from NAND.ext - technology: scmos
+
+.global Vdd Gnd 
+
+
+* Top level circuit NAND
+
+M1000 a_13_n30# A gnd Gnd nfet w=3u l=1.2u
++  ad=28.8p pd=25.2u as=21.6p ps=20.4u
+M1001 out B a_13_n30# Gnd nfet w=3u l=1.2u
++  ad=14.4p pd=15.6u as=0p ps=0u
+M1002 out B vdd w_n1_n1# pfet w=2.4u l=1.2u
++  ad=14.4p pd=21.6u as=17.28p ps=24u
+M1003 out A vdd w_n1_n1# pfet w=2.4u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+.end
+

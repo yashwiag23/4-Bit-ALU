@@ -1,0 +1,13 @@
+* NGSPICE file created from not.ext - technology: scmos
+
+.global Vdd Gnd 
+
+
+* Top level circuit not
+
+M1000 out in gnd Gnd nfet w=2.4u l=1.2u
++  ad=7.2p pd=10.8u as=7.2p ps=10.8u
+M1001 out in VDD w_n9_1# pfet w=2.4u l=1.2u
++  ad=7.2p pd=10.8u as=7.2p ps=10.8u
+.end
+

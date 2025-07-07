@@ -1,0 +1,25 @@
+timestamp 1701353143
+version 8.2
+tech scmos
+style lambda=0.6(hp)
+scale 1000 1000 60
+resistclasses 99630 120000 25000 60 40 1500000
+node "a_13_n30#" 319 0 13 -30 ndiff 80 42 0 0 0 0 0 0 0 0 0 0
+node "gnd" 239 1.092 -1 -30 ndiff 60 34 0 0 0 0 44 30 0 0 0 0
+node "out" 873 4.677 13 5 pdiff 40 26 40 36 0 0 237 156 0 0 0 0
+node "vdd" 742 4.779 5 5 pdc 0 0 48 40 0 0 240 138 0 0 0 0
+node "B" 567 5.918 22 -13 pc 0 0 0 0 118 108 28 22 0 0 0 0
+node "A" 567 5.918 4 -13 pc 0 0 0 0 118 108 28 22 0 0 0 0
+node "w_n1_n1#" 4031 29.626 -1 -1 nw 0 0 0 0 0 0 0 0 0 0 688 118
+cap "B" "w_n1_n1#" 1.416
+cap "A" "w_n1_n1#" 1.416
+cap "B" "out" 0.612
+cap "vdd" "w_n1_n1#" 3.255
+cap "vdd" "out" 0.2016
+cap "out" "w_n1_n1#" 2.967
+fet nfet 29 -30 30 -29 10 14 "Gnd!" "B" 4 0 "a_13_n30#" 5 0 "out" 5 0
+fet nfet 11 -30 12 -29 10 14 "Gnd!" "A" 4 0 "gnd" 5 0 "a_13_n30#" 5 0
+fet pfet 29 5 30 6 8 12 "w_n1_n1#" "B" 4 0 "vdd" 4 0 "out" 4 0
+fet pfet 11 5 12 6 8 12 "w_n1_n1#" "A" 4 0 "vdd" 4 0 "out" 4 0
+subcap "out" -0.276
+subcap "vdd" -0.927

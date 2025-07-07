@@ -1,0 +1,33 @@
+* NGSPICE file created from OR4.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt not gnd VDD in out
+M1000 out in gnd Gnd nfet w=2.4u l=1.2u
++  ad=7.2p pd=10.8u as=7.2p ps=10.8u
+M1001 out in VDD w_n9_1# pfet w=2.4u l=1.2u
++  ad=7.2p pd=10.8u as=7.2p ps=10.8u
+.ends
+
+
+* Top level circuit OR4
+
+Xnot_0 gnd vdd not_0/in out not
+M1000 a_n8_9# A vdd w_n21_0# pfet w=3u l=1.2u
++  ad=28.8p pd=25.2u as=9p ps=12u
+M1001 not_0/in D gnd Gnd nfet w=3.6u l=1.2u
++  ad=54p pd=58.8u as=60.48p ps=62.4u
+M1002 not_0/in D a_30_9# w_n21_0# pfet w=3u l=1.2u
++  ad=10.8p pd=13.2u as=32.4p ps=27.6u
+M1003 not_0/in A gnd Gnd nfet w=3.6u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1004 a_10_9# B a_n8_9# w_n21_0# pfet w=3u l=1.2u
++  ad=32.4p pd=27.6u as=0p ps=0u
+M1005 not_0/in C gnd Gnd nfet w=3.6u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1006 not_0/in B gnd Gnd nfet w=3.6u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1007 a_30_9# C a_10_9# w_n21_0# pfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+.end
+

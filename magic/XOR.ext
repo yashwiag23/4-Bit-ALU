@@ -1,0 +1,57 @@
+timestamp 1701356350
+version 8.2
+tech scmos
+style lambda=0.6(hp)
+scale 1000 1000 60
+resistclasses 99630 120000 25000 60 40 1500000
+use NAND NAND_2 1 0 -91 0 1 -9
+use NAND NAND_0 1 0 -37 0 1 37
+use NAND NAND_3 1 0 37 0 1 -36
+use NAND NAND_1 1 0 99 0 1 -8
+node "out" 0 2.058 139 -22 m1 0 0 0 0 0 0 52 34 0 0 0 0
+node "m1_77_n50#" 1 9.924 77 -50 m1 0 0 0 0 0 0 280 148 0 0 0 0
+node "m1_3_23#" 2 19.722 3 23 m1 0 0 0 0 0 0 564 290 0 0 0 0
+node "m1_n47_n23#" 2 29.274 -47 -23 m1 0 0 0 0 0 0 926 382 0 0 0 0
+node "B" 4 24.558 -83 -65 m1 0 0 0 0 0 0 609 412 0 0 0 0
+node "gnd" 5 36.158 -91 -50 v 0 0 0 0 0 0 165 112 1561 786 0 0
+node "A" 3 25.104 -136 24 m1 0 0 0 0 0 0 720 368 0 0 0 0
+node "vdd" 4 31.681 -92 10 v 0 0 0 0 0 0 100 80 1433 722 0 0
+cap "m1_77_n50#" "m1_3_23#" 0.189
+cap "gnd" "B" 0.752
+cap "A" "vdd" 0.928
+cap "m1_n47_n23#" "gnd" 1.104
+cap "m1_n47_n23#" "B" 0.2484
+cap "m1_3_23#" "vdd" 0.928
+subcap "m1_n47_n23#" -18.924
+subcap "B" -8.485
+subcap "gnd" -24.113
+subcap "vdd" -26.775
+cap "NAND_2/a_13_n30#" "B" 1.02
+cap "NAND_3/gnd" "NAND_3/B" 0.054
+cap "NAND_3/A" "NAND_3/B" 0.6552
+cap "NAND_0/a_13_n30#" "NAND_3/A" 1.48
+cap "NAND_3/out" "NAND_1/A" 0.8665
+cap "NAND_3/out" "NAND_1/gnd" 0.054
+subcap "vdd" -24.89
+cap "NAND_0/w_n1_n1#" "vdd" 0.022
+subcap "m1_3_23#" -14.211
+merge "NAND_0/out" "NAND_1/A" -1.08 0 0 0 0 0 0 -16 -24 0 0 0 0
+merge "NAND_1/A" "m1_3_23#"
+merge "NAND_0/A" "NAND_2/A" -1.074 0 0 0 0 0 0 -12 -26 0 0 0 0
+merge "NAND_2/A" "A"
+merge "NAND_1/gnd" "NAND_3/gnd" -1.972 0 0 0 0 0 0 -24 -44 0 0 0 0
+merge "NAND_3/gnd" "NAND_0/gnd"
+merge "NAND_0/gnd" "NAND_2/gnd"
+merge "NAND_2/gnd" "gnd"
+merge "NAND_0/B" "NAND_3/A" -1.95 0 0 0 0 0 0 -10 -30 0 0 0 0
+merge "NAND_3/A" "NAND_2/out"
+merge "NAND_2/out" "m1_n47_n23#"
+merge "NAND_0/vdd" "NAND_1/vdd" -4.504 0 0 0 0 0 0 -4 -40 -50 -101 0 0
+merge "NAND_1/vdd" "NAND_3/vdd"
+merge "NAND_3/vdd" "NAND_2/vdd"
+merge "NAND_2/vdd" "vdd"
+merge "NAND_1/out" "out" -0.816 0 0 0 0 0 0 -16 -16 0 0 0 0
+merge "NAND_3/B" "NAND_2/B" -1.728 0 0 0 0 0 0 -9 -22 0 0 0 0
+merge "NAND_2/B" "B"
+merge "NAND_1/B" "NAND_3/out" -1.356 0 0 0 0 0 0 -16 -24 0 0 0 0
+merge "NAND_3/out" "m1_77_n50#"

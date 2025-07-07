@@ -1,0 +1,37 @@
+* NGSPICE file created from AND5.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt not gnd VDD in out
+M1000 out in gnd Gnd nfet w=2.4u l=1.2u
++  ad=7.2p pd=10.8u as=7.2p ps=10.8u
+M1001 out in VDD w_n9_1# pfet w=2.4u l=1.2u
++  ad=7.2p pd=10.8u as=7.2p ps=10.8u
+.ends
+
+
+* Top level circuit AND5
+
+Xnot_0 gnd vdd not_0/in out not
+M1000 not_0/in E a_49_n35# Gnd nfet w=2.4u l=1.2u
++  ad=11.52p pd=14.4u as=24.48p ps=25.2u
+M1001 not_0/in E vdd w_n22_7# pfet w=3u l=1.2u
++  ad=50.4p pd=63.6u as=48.6p ps=62.4u
+M1002 not_0/in D vdd w_n22_7# pfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1003 a_n9_n35# A gnd Gnd nfet w=2.4u l=1.2u
++  ad=24.48p pd=25.2u as=11.52p ps=14.4u
+M1004 a_10_n35# B a_n9_n35# Gnd nfet w=2.4u l=1.2u
++  ad=24.48p pd=25.2u as=0p ps=0u
+M1005 not_0/in A vdd w_n22_7# pfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1006 a_49_n35# D a_29_n35# Gnd nfet w=2.4u l=1.2u
++  ad=0p pd=0u as=25.92p ps=26.4u
+M1007 not_0/in C vdd w_n22_7# pfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1008 a_29_n35# C a_10_n35# Gnd nfet w=2.4u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1009 not_0/in B vdd w_n22_7# pfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+.end
+

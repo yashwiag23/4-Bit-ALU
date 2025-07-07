@@ -1,0 +1,67 @@
+* NGSPICE file created from four_bit_adder.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt NAND gnd A B out vdd
+M1000 a_13_n30# A gnd Gnd nfet w=3u l=1.2u
++  ad=28.8p pd=25.2u as=21.6p ps=20.4u
+M1001 out B a_13_n30# Gnd nfet w=3u l=1.2u
++  ad=14.4p pd=15.6u as=0p ps=0u
+M1002 out B vdd w_n1_n1# pfet w=2.4u l=1.2u
++  ad=14.4p pd=21.6u as=17.28p ps=24u
+M1003 out A vdd w_n1_n1# pfet w=2.4u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+.ends
+
+.subckt not gnd VDD in out
+M1000 out in gnd Gnd nfet w=2.4u l=1.2u
++  ad=7.2p pd=10.8u as=7.2p ps=10.8u
+M1001 out in VDD w_n9_1# pfet w=2.4u l=1.2u
++  ad=7.2p pd=10.8u as=7.2p ps=10.8u
+.ends
+
+.subckt AND gnd A B out vdd
+XNAND_0 gnd A B not_0/in vdd NAND
+Xnot_0 gnd vdd not_0/in out not
+.ends
+
+.subckt XOR gnd A B out vdd
+XNAND_0 gnd A NAND_3/A NAND_1/A vdd NAND
+XNAND_1 gnd NAND_1/A NAND_1/B out vdd NAND
+XNAND_2 gnd A B NAND_3/A vdd NAND
+XNAND_3 gnd NAND_3/A B NAND_1/B vdd NAND
+.ends
+
+.subckt NOR gnd A B out vdd
+M1000 out A gnd Gnd nfet w=3u l=1.2u
++  ad=28.8p pd=31.2u as=27p ps=30u
+M1001 out B gnd Gnd nfet w=3u l=1.2u
++  ad=0p pd=0u as=0p ps=0u
+M1002 out B a_n4_7# w_n19_1# pfet w=3.6u l=1.2u
++  ad=17.28p pd=16.8u as=34.56p ps=26.4u
+M1003 a_n4_7# A vdd w_n19_1# pfet w=3.6u l=1.2u
++  ad=0p pd=0u as=15.12p ps=15.6u
+.ends
+
+.subckt OR gnd A B out vdd
+Xnot_0 gnd vdd not_0/in out not
+XNOR_0 gnd A B not_0/in vdd NOR
+.ends
+
+.subckt fulladder Car gnd A B C vdd S
+XAND_1 gnd A B OR_0/B vdd AND
+XAND_0 gnd C AND_0/B OR_0/A vdd AND
+XXOR_0 XOR_0/gnd A B AND_0/B vdd XOR
+XXOR_1 XOR_1/gnd C AND_0/B S vdd XOR
+XOR_0 gnd OR_0/A OR_0/B Car vdd OR
+.ends
+
+
+* Top level circuit four_bit_adder
+
+Xfulladder_0 fulladder_1/C gnd A0 B0 Cin vdd S0 fulladder
+Xfulladder_1 fulladder_2/C gnd A1 B1 fulladder_1/C vdd S1 fulladder
+Xfulladder_2 fulladder_3/C gnd A2 B2 fulladder_2/C vdd S2 fulladder
+Xfulladder_3 Cout gnd A3 B3 fulladder_3/C vdd S3 fulladder
+.end
+

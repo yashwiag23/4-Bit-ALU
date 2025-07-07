@@ -1,0 +1,79 @@
+timestamp 1701365046
+version 8.2
+tech scmos
+style lambda=0.6(hp)
+scale 1000 1000 60
+resistclasses 99630 120000 25000 60 40 1500000
+use fulladder fulladder_0 1 0 167 0 1 284
+use fulladder fulladder_1 1 0 165 0 1 -1081
+use fulladder fulladder_2 1 0 149 0 1 -2391
+use fulladder fulladder_3 1 0 165 0 1 -3621
+node "gnd" 41 956.076 -406 -4141 m2 0 0 0 0 0 0 0 0 65912 16494 0 0
+node "vdd" 74 827.742 447 -3342 m2 0 0 0 0 0 0 0 0 46490 18606 0 0
+node "B3" 0 11.238 -35 -3786 m1 0 0 0 0 0 0 430 106 0 0 0 0
+node "Cout" 0 2.358 1271 -3736 m1 0 0 0 0 0 0 54 42 0 0 0 0
+node "A3" 1 13.326 11 -3703 m1 0 0 0 0 0 0 469 148 0 0 0 0
+node "S3" 0 4.542 1043 -3440 m1 0 0 0 0 0 0 124 70 0 0 0 0
+node "B2" 0 16.65 -73 -2556 m1 0 0 0 0 0 0 650 150 0 0 0 0
+node "m1_n187_n3738#" 64 390.042 -187 -3738 m1 0 0 0 0 0 0 9682 6432 220 98 0 0
+node "A2" 1 17.358 -25 -2473 m1 0 0 0 0 0 0 616 190 0 0 0 0
+node "S2" 1 5.922 1027 -2210 m1 0 0 0 0 0 0 164 90 0 0 0 0
+node "B1" 1 27.474 -101 -1246 m1 0 0 0 0 0 0 1090 238 0 0 0 0
+node "m1_n171_n2487#" 64 389.036 -171 -2487 m1 0 0 0 0 0 0 9685 6412 189 98 0 0
+node "A1" 1 22.542 -37 -1163 m1 0 0 0 0 0 0 805 244 0 0 0 0
+node "S1" 1 4.956 1043 -900 m1 0 0 0 0 0 0 136 76 0 0 0 0
+node "B0" 0 10.254 -29 119 m1 0 0 0 0 0 0 390 98 0 0 0 0
+node "m1_n226_n1189#" 65 432.422 -226 -1189 m1 0 0 0 0 0 0 11121 6926 233 118 0 0
+node "Cin" 0 9.024 165 187 m1 0 0 0 0 0 0 340 88 0 0 0 0
+node "A0" 1 14.478 5 202 m1 0 0 0 0 0 0 511 160 0 0 0 0
+node "S0" 2 14.478 1044 465 m1 0 0 0 0 0 0 412 214 0 0 0 0
+subcap "Cout" -6.591
+cap "fulladder_3/vdd" "m1_n187_n3738#" 0.898
+cap "fulladder_3/vdd" "A3" 1.722
+cap "fulladder_3/B" "fulladder_3/C" 0.898
+cap "fulladder_3/A" "fulladder_3/C" 1.104
+subcap "S3" -4.419
+subcap "vdd" -822.932
+subcap "vdd" -823.119
+subcap "A2" -13.479
+cap "fulladder_2/vdd" "fulladder_2/A" 1.722
+cap "fulladder_2/vdd" "m1_n171_n2487#" 0.898
+cap "fulladder_2/B" "fulladder_2/C" 0.952
+cap "fulladder_2/A" "fulladder_2/C" 0.928
+subcap "A1" -16.359
+cap "m1_n226_n1189#" "fulladder_1/vdd" 1.104
+cap "fulladder_1/A" "fulladder_1/vdd" 1.722
+cap "fulladder_1/B" "fulladder_1/C" 1.158
+cap "fulladder_1/C" "fulladder_1/A" 0.928
+cap "fulladder_0/vdd" "A0" 1.722
+subcap "Cin" -1.56
+subcap "S0" -21.489
+subcap "S0" -2.64
+merge "fulladder_0/B" "B0" -2.04 0 0 0 0 0 0 -40 -40 0 0 0 0
+merge "fulladder_1/B" "B1" -2.4 0 0 0 0 0 0 -60 -40 0 0 0 0
+merge "fulladder_2/S" "S2" -0.816 0 0 0 0 0 0 -16 -16 0 0 0 0
+merge "fulladder_0/C" "Cin" -3.12 0 0 0 0 0 0 -100 -40 0 0 0 0
+merge "fulladder_1/Car" "fulladder_2/C" -2.786 0 0 0 0 0 0 -60 -42 0 0 0 0
+merge "fulladder_2/C" "m1_n171_n2487#"
+merge "fulladder_2/B" "B2" -2.04 0 0 0 0 0 0 -40 -40 0 0 0 0
+merge "fulladder_0/gnd" "fulladder_1/gnd" -4.424 0 0 0 0 0 0 0 0 -208 -116 0 0
+merge "fulladder_1/gnd" "fulladder_2/gnd"
+merge "fulladder_2/gnd" "fulladder_3/gnd"
+merge "fulladder_3/gnd" "gnd"
+merge "fulladder_3/B" "B3" -2.4 0 0 0 0 0 0 -60 -40 0 0 0 0
+merge "fulladder_0/vdd" "fulladder_1/vdd" -2.844 0 0 0 0 0 0 0 0 -96 -90 0 0
+merge "fulladder_1/vdd" "fulladder_2/vdd"
+merge "fulladder_2/vdd" "fulladder_3/vdd"
+merge "fulladder_3/vdd" "vdd"
+merge "fulladder_2/Car" "fulladder_3/C" -2.852 0 0 0 0 0 0 -58 -44 0 0 0 0
+merge "fulladder_3/C" "m1_n187_n3738#"
+merge "fulladder_1/S" "S1" -0.816 0 0 0 0 0 0 -16 -16 0 0 0 0
+merge "fulladder_3/A" "A3" -2.19 0 0 0 0 0 0 -63 -32 0 0 0 0
+merge "fulladder_0/Car" "fulladder_1/C" -3.374 0 0 0 0 0 0 -78 -50 0 0 0 0
+merge "fulladder_1/C" "m1_n226_n1189#"
+merge "fulladder_0/S" "S0" -0.414 0 0 0 0 0 0 10 -18 0 0 0 0
+merge "fulladder_2/A" "A2" -2.382 0 0 0 0 0 0 -70 -34 0 0 0 0
+merge "fulladder_3/Car" "Cout" -0.288 0 0 0 0 0 0 6 -12 0 0 0 0
+merge "fulladder_0/A" "A0" -1.806 0 0 0 0 0 0 -49 -28 0 0 0 0
+merge "fulladder_1/A" "A1" -2.19 0 0 0 0 0 0 -63 -32 0 0 0 0
+merge "fulladder_3/S" "S3" -0.744 0 0 0 0 0 0 -12 -16 0 0 0 0

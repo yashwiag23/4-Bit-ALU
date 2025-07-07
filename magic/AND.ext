@@ -1,0 +1,23 @@
+timestamp 1701359634
+version 8.2
+tech scmos
+style lambda=0.6(hp)
+scale 1000 1000 60
+resistclasses 99630 120000 25000 60 40 1500000
+use NAND NAND_0 1 0 1 0 1 36
+use not not_0 1 0 90 0 1 24
+node "gnd" 1 10.148 1 -4 v 0 0 0 0 0 0 62 46 440 186 0 0
+node "out" 0 0.798 106 19 m1 0 0 0 0 0 0 15 16 0 0 0 0
+node "m1_41_22#" 1 6.336 41 22 m1 0 0 0 0 0 0 176 96 0 0 0 0
+node "B" 0 1.038 16 23 m1 0 0 0 0 0 0 21 20 0 0 0 0
+node "A" 0 1.038 -2 23 m1 0 0 0 0 0 0 21 20 0 0 0 0
+node "vdd" 1 14.45 0 55 v 0 0 0 0 0 0 50 40 700 290 0 0
+merge "not_0/in" "NAND_0/out" -1.08 0 0 0 0 0 0 -16 -24 0 0 0 0
+merge "NAND_0/out" "m1_41_22#"
+merge "NAND_0/A" "A" -0.558 0 0 0 0 0 0 -9 -12 0 0 0 0
+merge "NAND_0/B" "B" -0.558 0 0 0 0 0 0 -9 -12 0 0 0 0
+merge "not_0/out" "out" -0.198 0 0 0 0 0 0 0 -6 0 0 0 0
+merge "not_0/gnd" "NAND_0/gnd" -1.256 0 0 0 0 0 0 -16 -26 0 0 0 0
+merge "NAND_0/gnd" "gnd"
+merge "not_0/VDD" "NAND_0/vdd" -0.88 0 0 0 0 0 0 0 -20 0 0 0 0
+merge "NAND_0/vdd" "vdd"
